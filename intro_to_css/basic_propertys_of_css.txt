@@ -1,0 +1,62 @@
+Text and Fonts
+
+    color: Changes the color of your text.
+    Example: color: red;
+    font-size: Makes text bigger or smaller.
+    Example: font-size: 16px;
+    font-family: Changes the style of the text, like choosing different fonts.
+    Example: font-family: Arial, sans-serif;
+    text-align: Aligns text (left, right, center, or justify).
+    Example: text-align: center;
+    font-weight: Makes text bold or normal.
+    Example: font-weight: bold;
+
+Colors and Backgrounds
+
+    background-color: Sets the background color of an element.
+    Example: background-color: yellow;
+    background-image: Adds an image in the background.
+    Example: background-image: url('image.jpg');
+
+Spacing
+
+    margin: Adds space outside an element.
+    Example: margin: 10px;
+    padding: Adds space inside an element, like inside a box.
+    Example: padding: 15px;
+
+Box and Borders
+
+    border: Adds a line around an element.
+    Example: border: 2px solid black;
+    border-radius: Makes the edges of a box round.
+    Example: border-radius: 10px;
+    width: Sets how wide an element is.
+    Example: width: 100px;
+    height: Sets how tall an element is.
+    Example: height: 50px;
+
+Positioning and Layout
+
+    display: Decides how an element shows up (block, inline, flex, etc.).
+    Example: display: flex;
+    position: Moves an element to a specific place (static, relative, absolute, fixed).
+    Example: position: absolute;
+    top, right, bottom, left: Adjusts where an element is on the page.
+    Example: top: 20px;
+
+Flexbox (for layout)
+
+    justify-content: Aligns items horizontally in a flex container.
+    Example: justify-content: space-between;
+    align-items: Aligns items vertically in a flex container.
+    Example: align-items: center;
+
+Miscellaneous
+
+    cursor: Changes the mouse pointer (like to a hand or cross).
+    Example: cursor: pointer;
+    overflow: Controls what happens if content is too big for its container (hidden, scroll, visible).
+    Example: overflow: scroll;
+    opacity: Makes an element see-through.
+    Example: opacity: 0.5;
