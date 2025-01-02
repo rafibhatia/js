@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 3: Block Layout</title>
+  <style>
+    .box {
+      display: inline-block; /* Fix this */
+      width: auto; /* Remove this */
+      background-color: lightcoral;
+      margin: 0 5px; /* Change to vertical margin */
+      color: white;
+      text-align: left; /* Fix this to center */
+      padding: 5px; /* Expand this */
+      font-size: 14px; /* Increase this */
+      border: 5px solid darkred; /* Remove this */
+    }
+
+    .explanation, .final-result {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .explanation {
+      background-color: lightgreen;
+      border: 2px solid green;
+    }
+
+    .final-result {
+      background-color: lightblue;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fix the Block Layout</h1>
+  <p>Adjust the boxes so they take the full width of the container, align vertically, center their content, and look consistent.</p>
+
+  <div class="box">Item 1</div>
+  <div class="box">Item 2</div>
+  <div class="box">Item 3</div>
+
+  <button onclick="showExplanation()">See Explanation</button>
+  <button onclick="showFinalResult()">See Final Result</button>
+
+  <div class="explanation">
+    <h2>What Just Happened?</h2>
+    <p>Switching to <code>display: block;</code> ensures that each box spans the entire width of its container and stacks vertically. Removing the unnecessary styles like borders and adjusting text alignment improves consistency and readability.</p>
+  </div>
+
+  <div class="final-result">
+    <h2>Final Result:</h2>
+    <div class="box" style="display: block; width: 100%; background-color: lightblue; margin: 10px 0; text-align: center; padding: 20px; font-size: 18px;">Item 1</div>
+    <div class="box" style="display: block; width: 100%; background-color: lightblue; margin: 10px 0; text-align: center; padding: 20px; font-size: 18px;">Item 2</div>
+    <div class="box" style="display: block; width: 100%; background-color: lightblue; margin: 10px 0; text-align: center; padding: 20px; font-size: 18px;">Item 3</div>
+  </div>
+
+  <script>
+    function showExplanation() {
+      document.querySelector('.explanation').style.display = 'block';
+    }
+
+    function showFinalResult() {
+      document.querySelector('.final-result').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

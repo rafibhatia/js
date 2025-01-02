@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2: Fix the Inline-Block Layout</title>
+  <style>
+    .container {
+      text-align: left; /* Fix this */
+      background-color: lightgreen;
+      padding: 20px;
+    }
+    .box {
+      display: block; /* Fix this */
+      width: 80px; /* Adjust this */
+      height: 80px; /* Adjust this */
+      background-color: orange;
+      margin: 0; /* Adjust this */
+      color: white;
+      text-align: left; /* Fix this */
+      line-height: 20px; /* Adjust this */
+      font-size: 12px; /* Adjust this */
+    }
+
+    .explanation, .final-result {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .explanation {
+      background-color: lightgreen;
+      border: 2px solid green;
+    }
+
+    .final-result {
+      background-color: lightblue;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fix the Inline-Block Layout</h1>
+  <p>Make the boxes sit next to each other but still behave like blocks.</p>
+
+  <div class="container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+  </div>
+
+  <button onclick="showExplanation()">See Explanation</button>
+  <button onclick="showFinalResult()">See Final Result</button>
+
+  <div class="explanation">
+    <h2>What Just Happened?</h2>
+    <p>Using <code>display: inline-block;</code> allows the boxes to align horizontally while maintaining block-like dimensions. Adjusting margins and text alignment improves layout consistency.</p>
+  </div>
+
+  <div class="final-result">
+    <h2>Final Result:</h2>
+    <div class="container" style="text-align: center;">
+      <div class="box" style="display: inline-block; width: 100px; height: 100px; margin: 10px; text-align: center; line-height: 100px; font-size: 16px;">A</div>
+      <div class="box" style="display: inline-block; width: 100px; height: 100px; margin: 10px; text-align: center; line-height: 100px; font-size: 16px;">B</div>
+      <div class="box" style="display: inline-block; width: 100px; height: 100px; margin: 10px; text-align: center; line-height: 100px; font-size: 16px;">C</div>
+    </div>
+  </div>
+
+  <script>
+    function showExplanation() {
+      document.querySelector('.explanation').style.display = 'block';
+    }
+
+    function showFinalResult() {
+      document.querySelector('.final-result').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

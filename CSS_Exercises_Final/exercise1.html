@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 1: Fix the Flexbox Layout</title>
+  <style>
+    .container {
+      display: block; /* Fix this */
+      gap: 0px; /* Increase this */
+      background-color: lightblue;
+      padding: 20px;
+    }
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: coral;
+      text-align: left; /* Fix this */
+      line-height: 50px; /* Adjust this */
+      margin: 5px; /* Adjust this */
+      color: white;
+    }
+
+    .explanation, .final-result {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .explanation {
+      background-color: lightgreen;
+      border: 2px solid green;
+    }
+
+    .final-result {
+      background-color: lightblue;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fix the Flexbox Layout</h1>
+  <p>Make the boxes line up horizontally with space between them.</p>
+
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </div>
+
+  <button onclick="showExplanation()">See Explanation</button>
+  <button onclick="showFinalResult()">See Final Result</button>
+
+  <div class="explanation">
+    <h2>What Just Happened?</h2>
+    <p>Changing <code>display</code> to <code>flex</code> allows the container to arrange its children in a row. Adjusting <code>justify-content</code> adds space between the items, and <code>gap</code> introduces consistent spacing.</p>
+  </div>
+
+  <div class="final-result">
+    <h2>Final Result:</h2>
+    <div class="container" style="display: flex; gap: 10px; justify-content: space-between;">
+      <div class="box" style="text-align: center; line-height: 100px; margin: 0;">1</div>
+      <div class="box" style="text-align: center; line-height: 100px; margin: 0;">2</div>
+      <div class="box" style="text-align: center; line-height: 100px; margin: 0;">3</div>
+    </div>
+  </div>
+
+  <script>
+    function showExplanation() {
+      document.querySelector('.explanation').style.display = 'block';
+    }
+
+    function showFinalResult() {
+      document.querySelector('.final-result').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5: Border Box</title>
+  <style>
+    .box {
+      box-sizing: content-box; /* Fix this */
+      width: 350px; /* Adjust this */
+      height: 150px; /* Adjust this */
+      padding: 50px; /* Reduce this */
+      border: 15px solid red; /* Adjust this */
+      background-color: purple; /* Change this */
+      color: white;
+      text-align: left; /* Fix this */
+      font-size: 10px; /* Fix this */
+    }
+
+    .explanation, .final-result {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .explanation {
+      background-color: lightgreen;
+      border: 2px solid green;
+    }
+
+    .final-result {
+      background-color: lightblue;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fix the Border Box Sizing</h1>
+  <p>Ensure the box includes padding and border within the specified dimensions and adjust the appearance.</p>
+
+  <div class="box">Border Box</div>
+
+  <button onclick="showExplanation()">See Explanation</button>
+  <button onclick="showFinalResult()">See Final Result</button>
+
+  <div class="explanation">
+    <h2>What Just Happened?</h2>
+    <p>Switching to <code>box-sizing: border-box;</code> includes padding and border in the total dimensions, simplifying layout calculations and ensuring consistency.</p>
+  </div>
+
+  <div class="final-result">
+    <h2>Final Result:</h2>
+    <div class="box" style="box-sizing: border-box; width: 200px; height: 100px; padding: 20px; border: 5px solid darkred; background-color: lightgray; text-align: center; font-size: 18px;">Border Box</div>
+  </div>
+
+  <script>
+    function showExplanation() {
+      document.querySelector('.explanation').style.display = 'block';
+    }
+
+    function showFinalResult() {
+      document.querySelector('.final-result').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

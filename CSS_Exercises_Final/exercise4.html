@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4: Content Box</title>
+  <style>
+    .box {
+      box-sizing: border-box; /* Fix this */
+      width: 300px; /* Adjust this */
+      height: 150px; /* Adjust this */
+      padding: 40px; /* Reduce this */
+      border: 10px solid darkblue; /* Adjust this */
+      background-color: orange; /* Change this */
+      color: black;
+      text-align: left; /* Fix this */
+      font-size: 12px; /* Fix this */
+    }
+
+    .explanation, .final-result {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .explanation {
+      background-color: lightgreen;
+      border: 2px solid green;
+    }
+
+    .final-result {
+      background-color: lightblue;
+      border: 2px solid blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Fix the Content Box Sizing</h1>
+  <p>Ensure the box only considers the content area for its dimensions, excludes padding and border, and adjusts the appearance.</p>
+
+  <div class="box">Content Box</div>
+
+  <button onclick="showExplanation()">See Explanation</button>
+  <button onclick="showFinalResult()">See Final Result</button>
+
+  <div class="explanation">
+    <h2>What Just Happened?</h2>
+    <p>Switching to <code>box-sizing: content-box;</code> excludes padding and border from the dimensions, ensuring the specified width and height apply only to the content.</p>
+  </div>
+
+  <div class="final-result">
+    <h2>Final Result:</h2>
+    <div class="box" style="box-sizing: content-box; width: 200px; height: 100px; padding: 20px; border: 5px solid darkblue; background-color: lightyellow; text-align: center; font-size: 18px;">Content Box</div>
+  </div>
+
+  <script>
+    function showExplanation() {
+      document.querySelector('.explanation').style.display = 'block';
+    }
+
+    function showFinalResult() {
+      document.querySelector('.final-result').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Enhanced CSS Block Party</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      color: darkblue;
+    }
+
+    .story {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 2px dashed lightblue;
+    }
+
+    .container {
+      margin: 20px 0;
+      padding: 20px;
+      border: 2px solid gray;
+      background-color: #f3f3f3;
+    }
+
+    .block-box {
+      display: block;
+      background-color: lightblue;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .inline-box {
+      display: inline;
+      background-color: lightgreen;
+      padding: 5px;
+      margin: 5px;
+    }
+
+    .inline-block-box {
+      display: inline-block;
+      background-color: lightyellow;
+      padding: 10px;
+      margin: 5px;
+      width: 120px;
+      text-align: center;
+    }
+
+    .flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: lightcoral;
+      padding: 10px;
+    }
+
+    .flex-item {
+      background-color: lightyellow;
+      padding: 20px;
+      margin: 5px;
+      border: 2px solid darkorange;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      background-color: lightgray;
+      padding: 10px;
+    }
+
+    .grid-item {
+      background-color: lightpink;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 10px 20px;
+      background-color: darkblue;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background-color: royalblue;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Enhanced CSS Block Party</h1>
+
+  <div class="story">
+    <h2>Welcome to the Ultimate CSS Block Party!</h2>
+    <p>Every display type has its own personality. To understand why they behave differently, let’s explore their quirks and how they compare to others. Click a button to meet each group!</p>
+    <button class="btn" onclick="showSection('block-party')">Meet the Block Elements</button>
+    <button class="btn" onclick="showSection('inline-party')">Meet the Inline Elements</button>
+    <button class="btn" onclick="showSection('inline-block-party')">Meet the Inline-Block Elements</button>
+    <button class="btn" onclick="showSection('flex-party')">Meet the Flex Items</button>
+    <button class="btn" onclick="showSection('grid-party')">Meet the Grid Items</button>
+    <button class="btn" onclick="showSection('none-party')">See the Hidden Elements</button>
+  </div>
+
+  <!-- Block Party -->
+  <div id="block-party" class="container hidden">
+    <h2>The Block Elements</h2>
+    <p><strong>Why Block?</strong> Block elements take up the entire width because they’re designed to create structure. Think of them as building the foundation of a page—like paragraphs or divs.</p>
+    <p><strong>Difference:</strong> Unlike inline elements, block elements always start on a new line and push everything below them.</p>
+    <div class="block-box">Block 1</div>
+    <div class="block-box">Block 2</div>
+    <div class="block-box">Block 3</div>
+    <button class="btn" onclick="hideSection('block-party')">Back to the Party</button>
+  </div>
+
+  <!-- Inline Party -->
+  <div id="inline-party" class="container hidden">
+    <h2>The Inline Elements</h2>
+    <p><strong>Why Inline?</strong> Inline elements are for content that flows naturally within text, like words or links. They’re compact and fit snugly in a line.</p>
+    <p><strong>Difference:</strong> Unlike block elements, inline elements don’t start a new line and cannot have custom dimensions (width/height).</p>
+    <p>
+      <span class="inline-box">Inline 1</span>
+      <span class="inline-box">Inline 2</span>
+      <span class="inline-box">Inline 3</span>
+    </p>
+    <button class="btn" onclick="hideSection('inline-party')">Back to the Party</button>
+  </div>
+
+  <!-- Inline-Block Party -->
+  <div id="inline-block-party" class="container hidden">
+    <h2>The Inline-Block Elements</h2>
+    <p><strong>Why Inline-Block?</strong> Inline-block is the best of both worlds. It behaves like inline elements but allows block-like custom dimensions.</p>
+    <p><strong>Difference:</strong> Unlike inline elements, inline-block elements can have a set width and height. They align horizontally like inline elements.</p>
+    <div class="inline-block-box">Inline-Block 1</div>
+    <div class="inline-block-box">Inline-Block 2</div>
+    <div class="inline-block-box">Inline-Block 3</div>
+    <button class="btn" onclick="hideSection('inline-block-party')">Back to the Party</button>
+  </div>
+
+  <!-- Flex Party -->
+  <div id="flex-party" class="container hidden">
+    <h2>The Flex Items</h2>
+    <p><strong>Why Flex?</strong> Flex is the master of alignment and space distribution. It’s perfect for creating dynamic layouts where items need to adjust automatically.</p>
+    <p><strong>Difference:</strong> Unlike block or inline-block, flex distributes space dynamically between items, aligning them based on the parent container’s properties.</p>
+    <div class="flex-container">
+      <div class="flex-item">Flex 1</div>
+      <div class="flex-item">Flex 2</div>
+      <div class="flex-item">Flex 3</div>
+    </div>
+    <button class="btn" onclick="hideSection('flex-party')">Back to the Party</button>
+  </div>
+
+  <!-- Grid Party -->
+  <div id="grid-party" class="container hidden">
+    <h2>The Grid Items</h2>
+    <p><strong>Why Grid?</strong> Grid is the champion of complex layouts. It creates two-dimensional grids with rows and columns for precise control.</p>
+    <p><strong>Difference:</strong> Unlike flex, grid works in both rows and columns simultaneously, making it more powerful for intricate designs.</p>
+    <div class="grid-container">
+      <div class="grid-item">Grid 1</div>
+      <div class="grid-item">Grid 2</div>
+      <div class="grid-item">Grid 3</div>
+      <div class="grid-item">Grid 4</div>
+      <div class="grid-item">Grid 5</div>
+      <div class="grid-item">Grid 6</div>
+    </div>
+    <button class="btn" onclick="hideSection('grid-party')">Back to the Party</button>
+  </div>
+
+  <!-- None Party -->
+  <div id="none-party" class="container hidden">
+    <h2>The Hidden Elements</h2>
+    <p><strong>Why None?</strong> Elements with <code>display: none</code> don’t appear in the layout. They’re useful for hiding content temporarily without deleting it.</p>
+    <p><strong>Difference:</strong> Unlike other display types, these elements take up no space—they’re invisible ninjas!</p>
+    <p><em>Try to find them... You can’t!</em></p>
+    <button class="btn" onclick="hideSection('none-party')">Back to the Party</button>
+  </div>
+
+  <script>
+    function showSection(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+
+    function hideSection(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
